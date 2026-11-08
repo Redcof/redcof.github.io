@@ -47,9 +47,9 @@ function draw(category){mount.replaceChildren();for(const [name,domain,descripti
 document.querySelectorAll(".filter").forEach(button=>button.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(b=>b.setAttribute("aria-pressed",String(b===button)));draw(button.dataset.filter)}));draw("All");document.getElementById("year").textContent=new Date().getFullYear();
 
 
-// Recalculate career experience from July 2015 on load and at local midnight.
+// Recalculate career experience from February 2015 on load and at local midnight.
 (function () {
-  const careerStart = new Date(2015, 6, 1); // July 1, 2015
+  const careerStart = new Date(2015, 1, 1); // February 1, 2015
   const target = document.getElementById("career-experience");
   if (!target) return;
   function updateCareerExperience() {
