@@ -59,7 +59,7 @@ document.querySelectorAll(".filter").forEach(button=>button.addEventListener("cl
     const remainder = months % 12;
     // Convert completed months into a decimal year truncated to one digit.
     const tenths = Math.floor(remainder * 10 / 12);
-    target.textContent = tenths >= 8 ? `Almost ${years + 1} years of experience` : `${years}+ years of experience`;
+    target.textContent = tenths >= 7 ? `Almost ${years + 1} years of experience` : `${years}+ years of experience`;
   }
   updateCareerExperience();
   // Check periodically so a page left open updates after the date changes.
